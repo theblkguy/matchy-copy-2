@@ -12,19 +12,39 @@
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+    // Initialize animals variable with an object literal
+    var animal = {};
+    // Assign animal property
+    animal.species = 'cat';
+    // assign name key/value pair
+    animal['name'] = 'Cable';
+    // assign noises key/value pair
+    animal.noises = [];
+    // print animal object
+    console.log(animal);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// initialize a variable with an array literal
+var noises = [];
+// Add a noise to the array
+noises[0] = 'meow';
+noises.push('nyan')
+noises.unshift('muwa')
+noises[noises.length] = 'miau'
+console.log(noises.length);
+console.log(noises[noises.length]);
+console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+animal['noises'] = noises;
+animal.noises.push('purr')
 
 
 /* *******************************************************************
