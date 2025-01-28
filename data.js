@@ -45,6 +45,7 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 animal['noises'] = noises;
 animal.noises.push('purr')
+console.log(animal)
 
 
 /* *******************************************************************
@@ -70,13 +71,43 @@ animal.noises.push('purr')
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var animals = [];
 
+animals.push(animal);
+console.log(animals);
+
+var duck = {species: 'duck', 
+            name: 'Jerome', 
+            noises: ['quack', 'honk', 'sneeze', 'woosh']};
+
+animals.push(duck);
+console.log(animals);
+
+var dog = {species: 'dog',
+            name: 'Mac Truck',
+            noises: ['woof', 'bark', 'whine', 'Hello!']};
+
+var horse = {species: 'horse',
+            name: 'Ed',
+            noises: ['neigh', 'well, howdy!']};
+
+animals.push(dog);
+animals.push(horse);
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var friends = []; // I chose an array because it is a good data structure for lists
+function getRandom(animals) {
+  return Math.floor(Math.random() * animals.length);
+}
 
+var random = getRandom(animals);
+friends.push(animals[random]['name'])
+console.log(friends)
+
+animals[0].friends = friends;
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
