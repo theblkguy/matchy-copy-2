@@ -13,7 +13,17 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+    // Initializing search function with an array and a string as params
+function search(animals, str){
+    // loop through the animals array
+    for (var i = 0; i <= animals.length - 1; i++) {
+        if(animals[i]['name'] === str){
+            return animals[i];
+        } else {
+            return null;
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
