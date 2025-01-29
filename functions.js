@@ -12,20 +12,25 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+/**
+ * I: An array of animals and a string
+ * O: an object that has the string as a name property
+ * C: N/A
+ * E: N/A
+ */
+
 
     // Initializing search function with an array and a string as params
 function search(arr, str){
-    var strArr = str.split();
-    console.log(strArr);
-    // loop through the animals array
-    for (var i = 0; i <= animals.length - 1; i++) {
-        if (arr[i]['name'].includes(strArr[0])) {
-            return animals[i];
-        } else {
-            return null;
-        }
+    let lostAni = arr.find(lostAni => lostAni.name === str)
+    if(lostAni) {
+        return lostAni;
+    } else {
+        return null;
     }
 }
+        
+
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
