@@ -14,10 +14,12 @@
 //////////////////////////////////////////////////////////////////////
 
     // Initializing search function with an array and a string as params
-function search(animals, str){
+function search(arr, str){
+    var strArr = str.split();
+    console.log(strArr);
     // loop through the animals array
     for (var i = 0; i <= animals.length - 1; i++) {
-        if(animals[i]['name'] === str){
+        if (arr[i]['name'].includes(strArr[0])) {
             return animals[i];
         } else {
             return null;
