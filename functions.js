@@ -35,19 +35,59 @@ function search(arr, str){
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+/**
+ * I: An array of animals, a string representing name for search, an object of replacement animal
+ * O: if an animal with given name exists in animals array, replace it. Otherwise, do nothing.
+ * C: N/A
+ * E: N/A
+ *  */
 
-
+function replace(animals, name, replacement) {
+        for (var i = 0; i <= animals.length - 1; i++) {
+            return animals[i]['name'] === name ? animals.splice(i, 1, replacement)
+            : animals
+    } 
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+/**I: an array of animals, name for search query
+ * O: If the name exists in the array delete the associated animal
+ * C: N/A
+ * E: N/A
+ */
 
+function remove(animals, name) {
+    for (var i = 0; i <= animals.length - 1; i++){
+        return animals[i]['name'] === name ? animals.splice(i, 1)
+        : animals;
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+/*
+I: An array of animals, an object of a new animal to be added
+O: New animal in animals array if it doesn't already exist
+C: N/A
+E: N/A
+*/
+
+function add(animals, animal){
+    function objLeng(str){
+        return str.length > 0;
+    }
+    for (var i = 0; i = animals.length - 1; i++) {
+        return objLeng(animal['name']) 
+        && objLeng(animal['species'])
+        && animal['name'] !== animals[i]['name'] 
+        ? animals.push(animal) : animals;
+    }
+}
 
 
 /**
