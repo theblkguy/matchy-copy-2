@@ -78,14 +78,15 @@ E: N/A
 */
 
 function add(animals, animal){
-    function objLeng(str){
-        return str.length > 0;
-    }
-    for (var i = 0; i = animals.length - 1; i++) {
-        return objLeng(animal['name']) 
-        && objLeng(animal['species'])
-        && animal['name'] !== animals[i]['name'] 
-        ? animals.push(animal) : animals;
+    for(var i = 0; i < animals.length; i++){
+        if(animal['name'].length > 0 
+        && animal['species'].length > 0
+        && animals[i]['name'] !== animal['name']
+        && animals[i]['species'] !== animal['species']) {
+            animals.push(animal)
+        } else {
+            return animals
+        }
     }
 }
 
